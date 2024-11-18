@@ -64,7 +64,7 @@ class monton():
         """
         if isinstance(algo, monton):
             for item, cantidad in algo.__stuff.items():
-                for _ in range(cantidad):
+                for int in range(cantidad):
                     self.add(item)
         else:
             self.add(algo)
