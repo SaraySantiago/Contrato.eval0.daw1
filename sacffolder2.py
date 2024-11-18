@@ -44,7 +44,7 @@ class monton():
         if algo in self.__stuff:
             return algo
         else:
-            return None  # Si el item no existe, None
+            return None
 
     def tomar(self, algo) -> object:
         """
@@ -55,7 +55,7 @@ class monton():
             self.__stuff[algo] -= 1
             return algo
         else:
-            return None  # Si el item no existe o ya no tiene cantidad,  None
+            return None
 
     def amontona(self, algo):
         """
@@ -84,10 +84,10 @@ class monton():
 
 if __name__ == "__main__":
     m0 = monton()  # m0 es un nuevo monton vacío
-    print(m0)  # Imprime el estado actual del monton
+    print(m0) 
 
     m1 = monton("algo")  # m1 es un monton con "algo"
-    print(m1)  # Imprime el estado de m1
+    print(m1)  
 
     m1.amontona("algo mas")  # Añade "algo mas" a m1
     print(m1)  # Imprime el estado de m1 después de amontonar
@@ -104,11 +104,11 @@ if __name__ == "__main__":
     assert m1.contiene("perla")
 
     m1.amontona("y mas mierdas")  # Añade más items
-    print(m1)  # Verifica el contenido del monton
+    print(m1)
 
     # Ahora amontonamos todo de m1 a m0 sin vaciar m1
     m0.amontona(m1)
-    print(m0)  # Verifica que m0 ha recibido los items de m1
+    print(m0) 
 
     # Consultamos y obtenemos una copia de un item en m0
     predicado = m0.contiene("perla")  # True
@@ -120,5 +120,5 @@ if __name__ == "__main__":
     tesoro = m0.tomar("perla")  # "perla", y en m0 desaparece
     print(tesoro)
 
-    print(m0)  # Verifica que "perla" ya no está en m0 después de tomarlo
-    print(m1)  # Verifica que m1 sigue igual después de la operación
+    print(m0)  # Verificas que "perla" ya no está en m0 después de tomarlo
+    print(m1)  # Verificas que m1 sigue igual después de la operación
