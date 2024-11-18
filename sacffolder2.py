@@ -1,4 +1,3 @@
-#! /usr/bin/python3
 
 class monton():
     """
@@ -17,14 +16,14 @@ class monton():
 
     def __str__(self) -> str:
         """
-        Devuelve una representación en cadena del monton,
+        Devuelves una representación en cadena del monton,
         mostrando los items y sus cantidades.
         """
         return f"<<montonsito: {self.__stuff}>>"
     
     def add(self, algo):
         """
-        Agrega un nuevo elemento al monton, o incrementa su cantidad
+        Agregas un nuevo elemento al monton, o incrementas su cantidad
         si ya está presente.
         """
         if algo in self.__stuff:
@@ -34,13 +33,13 @@ class monton():
 
     def __contains__(self, algo):
         """
-        Verifica si el item está presente en el monton.
+        Verificas si el item está presente en el monton.
         """
         return algo in self.__stuff
 
     def __popPgetP__(self, algo) -> object:
         """
-        Consulta y obtiene una copia del item sin modificar el contenedor.
+        Consultas y obtienes una copia del item sin modificar el contenedor.
         """
         if algo in self.__stuff:
             return algo
@@ -49,7 +48,7 @@ class monton():
 
     def tomar(self, algo) -> object:
         """
-        Consulta y obtiene una copia del item, reduciendo su cantidad en el contenedor.
+        Consultas y obtienes una copia del item, reduciendo su cantidad en el contenedor.
         Si el item no está en el monton o su cantidad es 0, no hace nada.
         """
         if algo in self.__stuff and self.__stuff[algo] > 0:
@@ -60,7 +59,7 @@ class monton():
 
     def amontona(self, algo):
         """
-        Agrega un item o todo el contenido de otro monton a este monton.
+        Agregas un item o todo el contenido de otro monton a este monton.
         Si el argumento es un monton, se agregan todos sus elementos sin vaciarlo.
         """
         if isinstance(algo, monton):
@@ -72,13 +71,13 @@ class monton():
     
     def contiene(self, algo) -> bool:
         """
-        Verifica si un item está presente en el monton.
+        Verificas si un item está presente en el monton.
         """
         return algo in self.__stuff
     
     def copiar(self, algo) -> object:
         """
-        Devuelve una copia del item, si está presente.
+        Devuelves una copia del item, si está presente.
         """
         return self.__popPgetP__(algo)
     
