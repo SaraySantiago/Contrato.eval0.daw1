@@ -1,10 +1,4 @@
 class Monton():
-    """
-    Clase que representa un "monton" de elementos. 
-    El contenedor usa un diccionario donde las claves son los elementos (k) 
-    y los valores son sus cantidades (v).
-    """
-
     # Diccionario privado para almacenar los elementos y sus cantidades
     __stuff = {}
 
